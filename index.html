@@ -83,18 +83,11 @@
       margin-right: auto;
     }
     .video-banner {
-      display: flex;
-      justify-content: center;
-      margin: 30px 0;
-    }
-    .video-banner .video-wrapper {
-      width: 60vw;
-      max-width: 900px;
-      min-width: 280px;
-      aspect-ratio: 16/9;
       position: relative;
       overflow: hidden;
-      background: #000;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      aspect-ratio: 16/9;
     }
     .video-banner iframe {
       position: absolute;
@@ -103,15 +96,9 @@
       top: 0;
       left: 0;
       border: none;
-      background: #000;
-      display: block;
     }
     @media (max-width: 768px) {
       .cards { flex-direction: column; }
-      .video-banner .video-wrapper {
-        width: 95vw;
-        max-width: 100vw;
-      }
     }
   </style>
 </head>
@@ -130,6 +117,12 @@
     </nav>
   </header>
 
+  <div class="video-banner">
+    <div class="video-wrapper">
+      <iframe src="https://share.synthesia.io/e/b396f871-b1c7-45ec-a878-55134e91a331" loading="lazy" title="Synthesia video player - Discover the Luxurious World of DurianLah!" allowfullscreen allow="encrypted-media; fullscreen;"></iframe>
+    </div>
+  </div>
+
   <section id="home" class="hero">
     <!-- Using a live stock image from Unsplash; replace URL if hosting locally -->
     <img src="https://www.thedailymeal.com/img/gallery/durian-fruit-has-an-infamous-smell-but-what-does-it-taste-like/intro-1691889621.webp" alt="Tantalizing durian fruit" class="hero-img">
@@ -139,12 +132,6 @@
       <p>Your premier source for the king of fruits.</p>
       <a href="#b2c" class="btn">Shop Now</a>
       <a href="#loyalty" class="btn">Join Loyalty</a>
-    </div>
-  </section>
-
-  <section class="video-banner">
-    <div class="video-wrapper">
-      <iframe src="https://share.synthesia.io/e/b396f871-b1c7-45ec-a878-55134e91a331" loading="lazy" title="Synthesia video player - Discover the Luxurious World of DurianLah!" allowfullscreen allow="encrypted-media; fullscreen;"></iframe>
     </div>
   </section>
 
