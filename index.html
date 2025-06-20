@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DurianLah! - Premium Durian for Everyone</title>
+  <style>
+    :root {
+      --primary-green: #2E7D32;
+      --accent-yellow: #FBC02D;
+      --bg-light: #FAFAFA;
+      --text-dark: #212121;
+      --text-light: #FFFFFF;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
+    header img { height: 60px; }
+    nav ul { display: flex; list-style: none; }
+    nav li { margin-left: 20px; }
+    nav a { text-decoration: none; color: var(--primary-green); font-weight: bold; }
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 400px;
+      overflow: hidden;
+    }
+    .hero img.hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero .content {
+      position: relative;
+      z-index: 2;
+      color: var(--text-light);
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
+    .btn { background: var(--primary-green); color: var(--text-light); padding: 12px 24px;
+      text-decoration: none; border-radius: 4px; font-size: 1rem; margin: 5px; display: inline-block;
+    }
+    section { padding: 40px 0; }
+    .cards { display: flex; flex-wrap: wrap; gap: 20px; }
+    .card { background: var(--text-light); border: 1px solid #ddd; border-radius: 8px;
+      flex: 1 1 300px; padding: 20px; text-align: center;
+    }
+    .card h3 { margin-bottom: 10px; color: var(--primary-green); }
+    .card p { margin-bottom: 15px; }
+    form { max-width: 500px; margin: 20px auto; display: flex; flex-direction: column; gap: 15px; }
+    form label { font-weight: bold; }
+    form input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    form button { background: var(--primary-green); color: var(--text-light); padding: 12px;
+      text-decoration: none; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer;
+    }
+    footer { text-align: center; padding: 20px 0; font-size: 0.9rem; color: #777; }
+    .gallery-img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 768px) {
+      .cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <img src="logo.png" alt="DurianLah! Logo">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#b2c">For You</a></li>
+        <li><a href="#b2b">For Business</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#loyalty">Loyalty</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <!-- Using a live stock image from Unsplash; replace URL if hosting locally -->
+    <img src="https://www.thedailymeal.com/img/gallery/durian-fruit-has-an-infamous-smell-but-what-does-it-taste-like/intro-1691889621.webp" alt="Tantalizing durian fruit" class="hero-img">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Welcome to DurianLah!</h1>
+      <p>Your premier source for the king of fruits.</p>
+      <a href="#b2c" class="btn">Shop Now</a>
+      <a href="#loyalty" class="btn">Join Loyalty</a>
+    </div>
+  </section>
+
+  <section id="b2c" class="container">
+    <h2>Durian for You</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Fresh Packs</h3>
+        <p>Premium farm-fresh durians delivered to your doorstep.</p>
+        <a href="#contact" class="btn">Order Now</a>
+      </div>
+      <div class="card">
+        <h3>Durian Treats</h3>
+        <p>Delicious durian pastries, ice creams, and more.</p>
+        <a href="#contact" class="btn">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="container">
+    <h2>Durian Varieties</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="durian1.png" alt="Durian 1" class="gallery-img">
+        <h3>Musang King</h3>
+        <p>Rich, creamy, and bittersweet. The king of all durians!</p>
+      </div>
+      <div class="card">
+        <img src="durian2.png" alt="Durian 2" class="gallery-img">
+        <h3>D24 Sultan</h3>
+        <p>Classic favorite with a smooth, buttery texture and mild flavor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="b2b" class="container">
+    <h2>Durian Solutions for Business</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Wholesale Supply</h3>
+        <p>Bulk durian supply for retailers, hotels, and events.</p>
+        <a href="#contact" class="btn">Get a Quote</a>
+      </div>
+      <div class="card">
+        <h3>Private Label</h3>
+        <p>Custom-branded durian products to elevate your brand.</p>
+        <a href="#contact" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>DurianLah! is a leading durian conglomerate, dedicated to bringing you the freshest and finest durian experiences. From local farm partnerships to global distribution, we handle every step with care and passion.</p>
+  </section>
+
+  <section id="loyalty" class="container">
+    <h2>Loyalty Programme</h2>
+    <p>Join our DurianLah! Loyalty Programme to earn points and unlock exclusive rewards!</p>
+    <form action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="e.g. +65 9123 4567" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <button type="submit">Join Now</button>
+    </form>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:hello@durianlah.com">hello@durianlah.com</a></p>
+    <p>Phone: +65 1234 5678</p>
+    <p>Address: 123 Durian Street, Singapore</p>
+  </section>
+
+  <footer>
+    &copy; 2025 DurianLah! All rights reserved.
+  </footer>
+</body>
+</html>
